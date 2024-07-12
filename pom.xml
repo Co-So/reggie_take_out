@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 添加这段代码 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+
+    <groupId>com.maxuwang</groupId>
+    <artifactId>reggie_take_out</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 添加如下内容 -->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!-- 添加如下依赖代码 -->
+    <dependencies>
+        <!-- spring boot起步依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- spring boot做单元测试的依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- spring boot的web依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- mybatis-plus依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+
+        <!-- lombok依赖 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
+
+        <!-- 对象转JSON依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.76</version>
+        </dependency>
+
+        <!-- 这个依赖是 Apache Commons Lang 库的一个组件，
+        它提供了一些 Java 标准库中缺少的额外的工具类。
+        Commons Lang 库主要提供了对
+                字符串操作、
+                数字操作、
+                反射机制、
+                并发性、
+                创建和序列化
+                等功能的增强。
+        使用这个库可以让 Java 开发者更加简便地执行一些常见的编程任务，而不需要重新发明轮子。 -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <!--
+            StringUtils：提供字符串操作的实用方法，如空检查、字符串剪切、查找和替换等。
+            NumberUtils：提供数字处理的实用方法，如转换、比较等。
+            DateUtils：提供日期和时间操作的实用方法，如日期计算、格式化等。
+            ReflectUtils：提供反射相关的实用方法，用于动态调用方法、构造对象等。
+            RandomStringUtils：用于生成随机字符串的实用工具。
+            EnumUtils：增强对枚举类型的操作，如查找、转换等。
+            ClassUtils：提供对类的操作，如获取类名、获取所有接口、转换名称到类等。
+            SystemUtils：提供访问系统属性、环境变量等的方法。
+            这个库非常适合处理各种常见的编程任务，特别是在处理字符串和日期时比 Java 标准库提供的方法更为简便和强大。在很多 Java 应用程序中，Commons Lang 是一个常用的实用工具库。
+         -->
+
+
+        <!-- MySQL驱动依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- 阿里数据库连接池依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.23</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.5.10</version>
+        </dependency>
+
+        <!-- 阿里云短信服务 -->
+
+    </dependencies>
+
+    <!-- 添加如下插件 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.5</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
