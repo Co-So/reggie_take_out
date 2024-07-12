@@ -10,6 +10,13 @@ spring:
       url: jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: root
       password: 123
+  # 配置spring Data Redis
+  redis:
+    host: localhost
+    port: 6379
+    # password: 123
+    database: 0 #表示连接的是Redis里面的0号数据库
+
 
 mybatis-plus:
   configuration:
